@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Texte de nos conseils -->
+    <TextView
+        style="@style/TitleTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/advice_popup_title"
+        android:textColor="@color/Green"
+        app:layout_constraintBottom_toTopOf="@+id/adviceCard"
+        app:layout_constraintStart_toStartOf="@+id/adviceCard"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Creation du rectangle de conseil -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/adviceCard"
+        android:layout_width="375dp"
+        android:layout_height="550dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="40dp"
+        app:strokeWidth="2.5dp"
+        app:strokeColor="@color/Red"
+        app:cardElevation="14dp"
+        android:outlineSpotShadowColor="@color/Red">
+
+        <!-- Ajout de l'image de la luminosité -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:src="@drawable/sunlight"/>
+
+        <!-- Ajout de la barre noir séparatrice -->
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="2dp"
+            android:background="@color/black"
+            android:layout_marginTop="220dp"
+            android:layout_marginLeft="35dp"/>
+
+        <!-- Ajout de la description -->
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="250dp"
+            android:layout_marginLeft="37dp"
+            android:text="Verifier le BRANCHEMENT de la source lumineuse."
+            style="@style/DefaultTextStyle"
+            android:gravity="center"/>
+        <TextView
+            style="@style/DefaultTextStyle"
+            android:layout_width="300dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="350dp"
+            android:layout_marginLeft="37dp"
+            android:text="Verifier si la plante est bien exposé à la lumière."
+            android:gravity="center_horizontal|center_vertical"/>
+
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

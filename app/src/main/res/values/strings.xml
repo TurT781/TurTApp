@@ -1,0 +1,156 @@
+<resources>
+    <string name="app_name">TurTApp</string>
+    <!--Page d'accueil -->
+    <string name="home_page_title">Mes plantes</string>
+    <string name="home_page_New_collection">Dernières plantes ajoutées :</string>
+    <string name="home_page_plant_name">Nom de la plante</string>
+    <string name="home_page_plant_description">Description de la plante</string>
+
+    <!--Page Nouvelles collections -->
+    <string name="New_Collection_page">Dernières plantes ajoutées :</string>
+    <string name="plant_name">Nom_de_la_plante</string>
+    <string name="plant_name_description_title">Descriptif :</string>
+    <string name="plant_name_description_message">Description</string>
+
+    <!--Page ajout d'une plante -->
+    <string name="add_new_plant">Ajout d\'une plante :</string>
+    <string name="add_plant_page_upload_button">Charger une image :</string>
+    <string name="add_plant_page_name_input">Nom de la plante</string>
+    <string name="add_plant_page_description_input">Description de la plante</string>
+
+    <string-array name="add_plant_page_grow_spinner_input">
+        <item>Croissance : Lente</item>
+        <item>Croissance : Moyenne</item>
+        <item>Croissance : Rapide</item>
+    </string-array>
+
+    <string-array name="add_plant_page_water_spinner_input">
+        <item>Consommation : Faible</item>
+        <item>Consommation : Moyenne</item>
+        <item>Consommation : Elevee</item>
+    </string-array>
+
+    <string name="add_new_plant_page_potted_date">Date de mise en pot</string>
+    <string name="add_plant_page_confirm_button">Confirmer</string>
+
+
+    <!--Page fenêtre confirmation d'ajout-->
+    <string name="popup_page_name">Confirmation d\'ajout:</string>
+    <string name="popup_page_confirm">Votre plante à bien été enregistré</string>
+    <string name="popup_page_message">text</string>
+
+
+    <!--Page fenêtre cancel d'ajout-->
+    <string name="popup_page_cancel">Annulation d\’ajout de votre plante .</string>
+    <string name="popup_page_cancel_button_no">NON</string>
+    <string name="popup_page_cancel_button_yes">OUI</string>
+
+
+    <!--Page fenêtre notification-->
+    <string name="page_notification">objet</string>
+
+    <!--Page fenêtre notification popup-->
+    <string name="page_notification_message">Message</string>
+
+    <!--Page my plant -->
+    <string name="my_plant_page_title">Ma plante</string>
+    <string name="my_plant_page_plant_name">Nom de la plante</string>
+
+    <string name="my_plant_page_descriptions_section">Description</string>
+    <string name="potted_date_title"> Mise en pot :</string>
+    <string name="potted_date_message">DATETIME</string>
+
+    <string name="scientific_name_title"> Nom scientifique :</string>
+    <string name="scientific_name_message"> String</string>
+
+    <string name="height_name_title">Hauteur :</string>
+    <string name="height_name_message"> String </string>
+
+    <string name="flowering_name_title">Floraison :</string>
+    <string name="flowering_name_message"> String </string>
+
+    <string name="status_name_title">Statut :</string>
+    <string name="status_name_message"> String </string>
+
+    <string name="info_humidity_title">Humidité :</string>
+    <string name="info_humidity_number"> UInt  </string>
+
+    <string name="info_temperature_title">Température :</string>
+    <string name="info_temperature_number"> Int  </string>
+
+    <string name="info_luminosity_title">Luminosité :</string>
+    <string name="info_luminosity_number"> Int  </string>
+
+    <string name="info_condition_title">Maladies :</string>
+    <string name="info_condition_number"> String  </string>
+
+    <string name="info_fertilizer_quality_title">Engrais :</string>
+    <string name="info_fertilizer_quality_number"> UInt  </string>
+
+    <string name="info_grow_title">Croissance :</string>
+    <string name="info_grow_number"> String  </string>
+
+    <!--Page information popup -->
+    <string name="information_page_popup_plant_name"> Nom de ma plante  </string>
+    <string name="information_page_popup_information"> Informations : </string>
+    <string name="information_page_popup_type"> String </string> <!--Y = var -->
+    <string name="information_page_popup_day"> Jour </string> <!--X = day(i in 1..7)-->
+    <string name="information_page_popup_advice_button"> Conseils : </string>
+    <string name="information_page_popup_support_button"> Assistances : </string>
+
+    <!--Page advice popup -->
+    <string name="advice_popup_title"> Nos conseils :  </string>
+    <string name="advice_popup_under_title"> Conseils :  </string>
+    <string name="advice_popup_message"> Text </string>
+
+    <!--Page support popup -->
+    <string name="support_page_popup_title"> Assistance </string>
+    <string name="support_page_popup_category"> Catégories : </string>        <!--Required-->
+    <string name="support_page_popup_request_input"> Votre requête :</string> <!--Required-->
+    <string name="support_page_popup_submit_button"> Envoyer </string>        <!--Required -->
+
+    <!--Page support popup categories -->
+    <string name="support_page_popup_humidity_button"> Taux d\'humidité </string>
+    <string name="support_page_popup_luminosity_button"> Taux de luminosité </string>
+    <string name="support_page_popup_fertilize_quality_button"> Qualité de la tere </string>
+    <string name="support_page_popup_temperature_button"> Température </string>
+    <string name="support_page_popup_condition_button"> Maladies</string>
+    <string name="support_page_popup_grow_button"> Croissance</string>
+    <string name="support_page_popup_other_button"> Autres</string>
+
+    <!--Page support popup submit  -->
+    <string name="support_popup_confirm_message"> Votre requête a bien été envoyer </string>
+    <string name="support_popup_confirm_home_page_button"> Accueil </string>
+
+    <!--Page delete plant popup -->
+    <string name="delete_plant_page_popup_title"> Nom de la plante </string>
+
+    <string name="delete_plant_page_popup_potted_date_title">Date mise en pot</string>
+    <string name="delete_plant_page_popup_potted_date_message">DATETIME</string>
+
+    <string name="delete_plant_page_popup_scientific_name_title">Nom scientifique</string>
+    <string name="delete_plant_page_popup_scientific_message">String</string>
+
+    <string name="delete_plant_page_popup_height_title">Hauteur</string>
+    <string name="delete_plant_page_popup_height_message">UInt</string>
+
+    <string name="delete_plant_page_popup_flowering_title">Floraison</string>
+    <string name="delete_plant_page_popup_flowering_message">Text</string>
+
+    <string name="delete_plant_page_popup_status_name_title">Satut</string>
+    <string name="delete_plant_page_popup_status_name_message">Text</string>
+
+    <string name="delete_plant_page_popup_confirm_message">Text</string>
+
+    <string name="delete_plant_page_popup_No_button">NON</string>
+    <string name="delete_plant_page_popup_Yes_button">OUI</string>
+
+    <!--Page delete plant popup confirmation-->
+    <string name="delete_plant_page_popup_confirmation_message">String</string>
+    <string name="delete_plant_page_popup_confirmation_home_button">Accueil</string>
+
+    <!--Page plant customise -->
+    <string name="item_plant_name">Nom de la plante</string>
+    <string name="item_plant_description">Description de la plante</string>
+
+</resources>

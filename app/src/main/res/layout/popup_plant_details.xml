@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- La page n'est pas encore connecter au main activity-->
+
+    
+    <!-- Les couleurs servent à montrer si la qualité est bonne moyenne au mauvaise-->
+
+    <!-- Texte ma plante -->
+    <TextView
+        android:id="@+id/my_plant_page_title"
+        style="@style/TitleTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:text="@string/my_plant_page_title"
+        android:textColor="@color/DarkGreen"
+        android:layout_marginBottom="@dimen/default_margin"
+        app:layout_constraintBottom_toTopOf="@+id/my_plant_page_plant_name"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <!-- Bouton croix -->
+    <ImageView
+        android:id="@+id/close_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/close_button"
+        app:layout_constraintBottom_toBottomOf="@+id/my_plant_page_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/my_plant_page_title"
+        android:layout_marginRight="@dimen/default_margin"/>
+
+
+    <!-- Nom de la plante -->
+    <TextView
+        android:id="@+id/my_plant_page_plant_name"
+        style="@style/TitleTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="60dp"
+        android:text="@string/my_plant_page_plant_name"
+        app:layout_constraintBottom_toTopOf="@+id/cardView2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <!-- Image de la plante -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="140dp"
+        android:layout_marginLeft="@dimen/default_margin"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/anthurium_rouge" />
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- Rectangle de description de la plante -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView5"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardView2"
+        app:layout_constraintTop_toTopOf="@+id/cardView2">
+
+
+        <!-- Mettre le texte en colonne en utilisant linear Layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/DefaultTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:text="@string/potted_date_title"
+                android:textColor="@color/DarkGray" />
+
+            <TextView
+                style="@style/DefaultTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:text="@string/flowering_name_title"
+                android:textColor="@color/DarkGray" />
+
+            <TextView
+                style="@style/DefaultTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:text="@string/status_name_title"
+                android:textColor="@color/DarkGray" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- Rectangle Carte pour info humidite -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardHumidity"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        app:strokeWidth="2.5dp"
+        app:strokeColor="@color/Green"
+        android:layout_marginStart="50dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardView2">
+
+        <TextView
+            style="@style/DefaultTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="31dp"
+            android:text="@string/info_humidity_title"
+            android:textColor="@color/LightGray" />
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <!-- Rectangle Carte pour info Temperature -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardTemperature"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_marginRight="50dp"
+        app:strokeWidth="2.5dp"
+        app:strokeColor="@color/Orange"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardHumidity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardHumidity"
+        app:layout_constraintTop_toTopOf="@+id/cardHumidity">
+
+        <TextView
+            style="@style/DefaultTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/info_temperature_title"
+            android:textColor="@color/LightGray" />
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <!-- Rectangle Carte pour info Luminosite -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardLuminosity"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        app:cardCornerRadius="15dp"
+        app:strokeWidth="2.5dp"
+        app:strokeColor="@color/Red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/cardHumidity"
+        app:layout_constraintTop_toBottomOf="@+id/cardHumidity"
+        app:layout_constraintVertical_bias="0.074">
+
+        <TextView
+            style="@style/DefaultTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:text="@string/info_luminosity_title"
+            android:textColor="@color/LightGray" />
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <!-- Rectangle Carte pour info Engrai -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardFertilizer"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/cardLuminosity"
+        app:layout_constraintTop_toTopOf="@+id/image_luminosity"
+        app:strokeColor="@color/Green"
+        app:strokeWidth="2.5dp">
+
+        <TextView
+            style="@style/DefaultTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:text="@string/info_fertilizer_quality_title"
+            android:textColor="@color/LightGray" />
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <!-- Rectangle Carte pour info Maladie -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardCondition"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        app:cardCornerRadius="15dp"
+        app:strokeWidth="2.5dp"
+        app:strokeColor="@color/Green"
+        app:layout_constraintBottom_toBottomOf="@+id/cardLuminosity"
+        app:layout_constraintEnd_toEndOf="@+id/cardTemperature"
+        app:layout_constraintTop_toTopOf="@+id/cardLuminosity">
+
+        <TextView
+            style="@style/DefaultTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:text="@string/info_condition_title"
+            android:textColor="@color/LightGray"/>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <!-- Rectangle Carte pour Croissance  -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardGrow"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        app:cardCornerRadius="15dp"
+        app:strokeWidth="2.5dp"
+        app:strokeColor="@color/Orange"
+        app:layout_constraintBottom_toBottomOf="@+id/cardFertilizer"
+        app:layout_constraintEnd_toEndOf="@+id/cardCondition">
+
+        <TextView
+            style="@style/DefaultTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:text="@string/info_grow_title"
+            android:textColor="@color/LightGray" />
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+    <!-- Image Carte pour info Eau -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/image_water"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardHumidity"
+        app:layout_constraintEnd_toStartOf="@+id/cardHumidity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardHumidity">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:src="@drawable/eau" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Image Carte pour info Temperature -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/image_temperature"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardTemperature"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardTemperature"
+        app:layout_constraintTop_toTopOf="@+id/cardTemperature">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:src="@drawable/high_temperature" />
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- Image Carte pour info Luminosite -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/image_luminosity"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardLuminosity"
+        app:layout_constraintEnd_toStartOf="@+id/cardLuminosity"
+        app:layout_constraintStart_toStartOf="@+id/image_water"
+        app:layout_constraintTop_toTopOf="@+id/cardLuminosity">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:src="@drawable/sunlight" />
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- Image Carte pour info maladie -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/image_infectious_disease"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/image_luminosity"
+        app:layout_constraintEnd_toEndOf="@+id/image_temperature"
+        app:layout_constraintStart_toStartOf="@+id/image_temperature"
+        app:layout_constraintTop_toTopOf="@+id/image_luminosity">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:src="@drawable/infectious_disease"/>
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- Image Carte pour info engrai -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/image_fertilizer"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardFertilizer"
+        app:layout_constraintEnd_toStartOf="@+id/cardLuminosity"
+        app:layout_constraintStart_toStartOf="@+id/image_luminosity"
+        app:layout_constraintTop_toTopOf="@+id/cardFertilizer">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/fertilizer" />
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- Image Carte pour info croissance -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/image_grow"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardGrow"
+        app:layout_constraintEnd_toEndOf="@+id/image_infectious_disease"
+        app:layout_constraintStart_toEndOf="@+id/cardCondition"
+        app:layout_constraintTop_toTopOf="@+id/cardGrow">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:src="@drawable/growing_plant" />
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- Bouton poubelle-->
+    <ImageView
+        android:id="@+id/ic_trash"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_trash"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/cardGrow"
+        app:layout_constraintStart_toStartOf="@+id/cardFertilizer"
+        app:layout_constraintTop_toBottomOf="@+id/cardFertilizer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

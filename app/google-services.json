@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "798142659244",
+    "project_id": "turtapp-39bee",
+    "storage_bucket": "turtapp-39bee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798142659244:android:ce2e33528e46c568bc7d09",
+        "android_client_info": {
+          "package_name": "fr.turt.turtapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "798142659244-2dain2lgph4ssi45vhb9k4mtlq3f0fo0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNo2sGoPQQktpSYt65AF85pL6NBBWSAeQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "798142659244-2dain2lgph4ssi45vhb9k4mtlq3f0fo0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
